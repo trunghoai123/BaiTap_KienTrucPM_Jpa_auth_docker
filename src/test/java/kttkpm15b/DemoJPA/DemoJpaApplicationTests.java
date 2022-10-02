@@ -78,48 +78,48 @@ class DemoJpaApplicationTests {
 		System.out.format("Tong tien luong nhan vien: %f",nhanVienService.sumLuong());
 	}
 
-	@Test
-	void findMVByBoe(){
-		for (String maNV : nhanVienService.findNVByBoe("Boeing")){
-			System.out.format("Ma NV Lay Boeing: %s \n",maNV);
-		}
-	}
-
-	@Test
-	void findByNVMB(){
-		for(NhanVien nv : nhanVienService.findByNVMB("747") ){
-			System.out.println(nv.toString());
-		}
-	}
-
-	@Test
-	void findMBbyTen(){
-		for(String mb : mayBayService.findMBbyTen("Nguyen")){
-			System.out.format("Ma may bay do Ho Nguyen lai: %s \n",mb);
-		}
-	}
-	@Test
-	void findByTime(){
-		for(ChuyenBay cb : chuyenBayService.findByTime("12:00:00") ){
-			System.out.println(cb.toString());
-		}
-	}
-
-	@Test
-	void findByGaAndTime(){
-		for(ChuyenBay cb : chuyenBayService.findByGaAndTime("DAD")){
-			System.out.println(cb.toString());
-		}
-	}
-	@Test
-	void countMBByNv(){
-		System.out.format("So may bay ma phi cong: %s lay: %d","269734834",mayBayService.countByNVMB("269734834"));
-	}
-
-	@Test
-	void findByNotPC(){
-		for(NhanVien nv : nhanVienService.findByNotPC() ){
-			System.out.println(nv.toString());
-		}
-	}
+//	@Test
+//	void findMVByBoe(){
+//		for (String maNV : nhanVienService.findNVByBoe("Boeing")){
+//			System.out.format("Ma NV Lay Boeing: %s \n",maNV);
+//		}
+//	}
+//
+//	@Test
+//	void findByNVMB(){
+//		for(NhanVien nv : nhanVienService.findByNVMB("747") ){
+//			System.out.println(nv.toString());
+//		}
+//	}
+//
+//	@Test
+//	void findMBbyTen(){
+//		for(String mb : mayBayService.findMBbyTen("Nguyen")){
+//			System.out.format("Ma may bay do Ho Nguyen lai: %s \n",mb);
+//		}
+//	}
+//	@Test
+//	void findByTime(){
+//		for(ChuyenBay cb : chuyenBayService.findByTime("12:00:00") ){
+//			System.out.println(cb.toString());
+//		}
+//	}
+//
+//	@Test
+//	void findByGaAndTime(){
+//		for(ChuyenBay cb : chuyenBayService.findByGaAndTime("DAD")){
+//			System.out.println(cb.toString());
+//		}
+//	}
+//	@Test
+//	void countMBByNv(){
+//		System.out.format("So may bay ma phi cong: %s lay: %d","269734834",mayBayService.countByNVMB("269734834"));
+//	}
+//
+//	@Test
+//	void findByNotPC(){
+//		for(NhanVien nv : nhanVienService.findByNotPC() ){
+//			System.out.println(nv.toString());
+//		}
+//	}
 }

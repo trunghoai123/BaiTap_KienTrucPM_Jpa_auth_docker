@@ -25,12 +25,12 @@ public class ChuyenBayService {
     public int countByGaDi(String gaDi){
         return chuyenBayRepository.countByGaDi(gaDi);
     }
-    public List<ChuyenBay> findByTime(String time){
-        return chuyenBayRepository.findByTime(time);
-    }
-
-    public List<ChuyenBay> findByGaAndTime(String gaDi){
-        return chuyenBayRepository.findByGaAndTime(gaDi);
-    }
+//    public List<ChuyenBay> findByTime(String time){
+//        return chuyenBayRepository.findByTime(time);
+//    }
+//
+//    public List<ChuyenBay> findByGaAndTime(String gaDi){
+//        return chuyenBayRepository.findByGaAndTime(gaDi);
+//    }
 
 }

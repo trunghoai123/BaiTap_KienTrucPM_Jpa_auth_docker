@@ -30,7 +30,12 @@ public class MainController {
         return "<h1><a href='/1'>cau 1</a></h1>" +
             "<h1><a href='/2'>cau 2</a></h1>" +
             "<h1><a href='/3'>cau 3</a></h1>" +
-            "<h1><a href='/4'>cau 4</a></h1>";
+            "<h1><a href='/4'>cau 4</a></h1>" +
+            "<h1><a href='/5'>cau 5</a></h1>" +
+            "<h1><a href='/6'>cau 6</a></h1>" +
+            "<h1><a href='/7'>cau 7</a></h1>" +
+            "<h1><a href='/8'>cau 8</a></h1>" +
+            "<h1><a href='/9'>cau 9</a></h1>";
     }
 
     @GetMapping("/1")
@@ -82,5 +87,27 @@ public class MainController {
     public String BaiTap6() {
         int chuyenbays = chuyenBayService.countByGaDi("SGN");
         return "co " + chuyenbays + "chuyen bay di Sai Gon";
+    }
+
+    @GetMapping("/7")
+    public String BaiTap7() {
+        List<MayBay> mayBays = mayBayService.findByLoai("boeing");
+        return "Có" + mayBays.size() +" loại máy báy Boeing";
+    }
+
+    @GetMapping("/8")
+    public String BaiTap8() {
+        double luong = nhanVienService.sumLuong();
+        return "Tong Luong Phai Tra Cho NV là: " + luong;
+    }
+
+    @GetMapping("/9")
+    public String BaiTap9() {
+        List<String> nhanviens = nhanVienService.findNVByBoe("boeing");
+        String ds_ma = "";
+        for (String ma : nhanviens) {
+            ds_ma += ", " + ma;
+        }
+        return ds_ma;
     }
 }

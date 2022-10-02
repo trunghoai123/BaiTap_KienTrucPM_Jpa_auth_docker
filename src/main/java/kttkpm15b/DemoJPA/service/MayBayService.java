@@ -18,10 +18,10 @@ public class MayBayService {
     public List<MayBay> findByLoai(String loai){
         return mayBayRepository.findByLoai(loai);
     }
-    public List<String> findMBbyTen(String ten){
-        return mayBayRepository.findMBByTen(ten);
-    }
-    public int countByNVMB(String ma_nv){
-        return mayBayRepository.countMBByNV(ma_nv);
-    }
+//    public List<String> findMBbyTen(String ten){
+//        return mayBayRepository.findMBByTen(ten);
+//    }
+//    public int countByNVMB(String ma_nv){
+//        return mayBayRepository.countMBByNV(ma_nv);
+//    }
 }
