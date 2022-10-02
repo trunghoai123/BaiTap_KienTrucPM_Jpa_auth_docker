@@ -35,7 +35,8 @@ public class MainController {
             "<h1><a href='/6'>cau 6</a></h1>" +
             "<h1><a href='/7'>cau 7</a></h1>" +
             "<h1><a href='/8'>cau 8</a></h1>" +
-            "<h1><a href='/9'>cau 9</a></h1>";
+            "<h1><a href='/9'>cau 9</a></h1>" +
+            "<h1><a href='/10'>cau 10</a></h1>";
     }
 
     @GetMapping("/1")
@@ -109,5 +110,11 @@ public class MainController {
             ds_ma += ", " + ma;
         }
         return ds_ma;
+    }
+
+    @GetMapping("/10")
+    public List<NhanVien> BaiTap10() {
+        List<NhanVien> nhanviens = nhanVienService.findByNVMB("747");
+        return nhanviens;
     }
 }

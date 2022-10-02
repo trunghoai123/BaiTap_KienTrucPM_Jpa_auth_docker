@@ -20,9 +20,9 @@ public interface NhanVienRepository extends JpaRepository<NhanVien,String> {
     @Query(nativeQuery = true, value = "select ma_nv from chungnhan as nv join maybay as mb on nv.ma_mb = mb.ma_mb where mb.loai like :loai"+"%")
     public List<String> findMaNVByBoe(@Param("loai") String loai);
 
-//    @Query(nativeQuery = true, value = "select nv.ma_nv, nv.ten, nv.luong from nhanvien as nv join chungnhan as cn on nv.ma_nv = cn.ma_nv join maybay as mb on cn.ma_mb = mb.ma_mb where mb.ma_mb = :loai")
-//    public List<NhanVien> findNVByMB(@Param("loai") String loai);
-//
+    @Query(nativeQuery = true, value = "select nv.ma_nv, nv.ten, nv.luong from nhanvien as nv join chungnhan as cn on nv.ma_nv = cn.ma_nv join maybay as mb on cn.ma_mb = mb.ma_mb where mb.ma_mb = :mamb")
+    public List<NhanVien> findNVByMB(@Param("mamb") String mamb);
+
 //    @Query(nativeQuery = true, value = "select * from nhanvien as nv " +
 //            "where nv.ma_nv not in (select nv.ma_nv from nhanvien as nv join chungnhan as cn where nv.ma_nv = cn.ma_nv " +
 //            "group by nv.ma_nv) ")

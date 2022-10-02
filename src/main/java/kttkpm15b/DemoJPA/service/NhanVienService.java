@@ -23,10 +23,10 @@ public class NhanVienService {
     public List<String> findNVByBoe(String loai){
         return nhanVienRepository.findMaNVByBoe(loai);
     }
-//
-//    public List<NhanVien> findByNVMB(String loai){
-//        return nhanVienRepository.findNVByMB(loai);
-//    }
+
+    public List<NhanVien> findByNVMB(String mamb){
+        return nhanVienRepository.findNVByMB(mamb);
+    }
 //    public List<NhanVien> findByNotPC(){
 //        return nhanVienRepository.findByNotPC();
 //    }
